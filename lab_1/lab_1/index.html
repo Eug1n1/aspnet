@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>index</title>
+</head>
+
+<body>
+    <div>
+        <div style="color: darkred" id="app_error"></div>
+        <div>
+            <label>X: </label>
+            <input type="text" name="X" class="col-3" id="x" />
+        </div>
+        <br />
+        <div>
+            <label>Y: </label>
+            <input type="text" name="Y" class="col-3" id="y" />
+        </div>
+        <br />
+        <div>
+            <button onclick="Post()">Mul</button>
+        </div>
+        <div id="result" content=""></div>
+        <br />
+    </div>
+    <script>
+        let result = document.getElementById('result')
+        result.setAttribute('style', 'color: black')
+
+        function Post() {
+            let x = document.getElementById('x')
+            let y = document.getElementById('y')
+            
+            let result = document.getElementById('result')
+            result.setAttribute('style', 'color: black')
+
+            var http = new XMLHttpRequest();
+            var url = '/mul';
+            var params = `X=${x.value}&Y=${y.value}`;
+            http.open('POST', url, true);
+
+            http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+            http.onreadystatechange = function () {
+                if (http.readyState == 4 && http.status == 200) {
+                    x.value = http.responseText
+                    y.value = ''
+                }
+            }
+
+            http.send(params);
+        }
+    </script>
+</body>
+</html>

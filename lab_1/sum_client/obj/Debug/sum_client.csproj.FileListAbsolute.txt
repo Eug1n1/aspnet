@@ -1,0 +1,11 @@
+C:\Users\eug1n1\Univer\aspnet\lab_1\sum_client\bin\Debug\sum_client.exe.config
+C:\Users\eug1n1\Univer\aspnet\lab_1\sum_client\bin\Debug\sum_client.exe
+C:\Users\eug1n1\Univer\aspnet\lab_1\sum_client\bin\Debug\sum_client.pdb
+C:\Users\eug1n1\Univer\aspnet\lab_1\sum_client\obj\Debug\sum_client.csproj.AssemblyReference.cache
+C:\Users\eug1n1\Univer\aspnet\lab_1\sum_client\obj\Debug\sum_client.csproj.SuggestedBindingRedirects.cache
+C:\Users\eug1n1\Univer\aspnet\lab_1\sum_client\obj\Debug\sum_client.Form1.resources
+C:\Users\eug1n1\Univer\aspnet\lab_1\sum_client\obj\Debug\sum_client.Properties.Resources.resources
+C:\Users\eug1n1\Univer\aspnet\lab_1\sum_client\obj\Debug\sum_client.csproj.GenerateResource.cache
+C:\Users\eug1n1\Univer\aspnet\lab_1\sum_client\obj\Debug\sum_client.csproj.CoreCompileInputs.cache
+C:\Users\eug1n1\Univer\aspnet\lab_1\sum_client\obj\Debug\sum_client.exe
+C:\Users\eug1n1\Univer\aspnet\lab_1\sum_client\obj\Debug\sum_client.pdb

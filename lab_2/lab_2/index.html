@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 2</title>
+</head>
+<body>
+
+    <button onclick="start_polling()" id="start_btn">start</button>
+    <button onclick="stop_polling()" id="stop_btn">stop</button>
+
+    <pre id="text_area"></pre>
+
+    <script>
+        let webSocket;
+        let textArea = document.getElementById('text_area');
+
+        function start_polling() {
+            if (webSocket) {
+                return
+            }
+
+            webSocket = new WebSocket("wss://localhost:44312/ws");
+
+            webSocket.onopen = function () {
+                webSocket.send("Connected");
+            }
+
+            webSocket.onclose = function () {
+                textArea.innerHTML += "RECV: Connection closed\n";
+            }
+
+            webSocket.onmessage = function (message) {
+                textArea.innerHTML += `RECV: ${message.data}\n`;
+            }
+        }
+
+
+        async function stop_polling() {
+            await webSocket.close();
+            webSocket = null
+        }
+
+    </script>
+</body>
+</html>
